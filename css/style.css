@@ -2,19 +2,85 @@
    RESET E CONFIGURAÇÕES GERAIS
    Não mexer aqui sem combinar com o grupo — é compartilhado por todo mundo.
 ============================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--fonte-txt);
 }
 
 :root {
-   --color-pink: #FBAEA6;
-   --color-yellow: #FFF69B;
-   --color-bege: #FEE8C3;
-   --color-orange: #FFCFA1;
-   --border: rgb(153, 153, 153);
-   --shadow: rgba(0, 0, 0, 0.25);
+   --color-pink: #ee598d;
+   --color-bege: #FFF3E4;
+   --color-lightbege: #FFFDF9;
+   --color-brown: #3B2416;
+   --color-lightbrown: #513727;
+   --shadow: #f1dec6;
+   --fonte-txt: "Montserrat", sans-serif;
+   --fonte-title: "Fredoka", sans-serif;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+.btn1 {
+   border: 2px solid black;
+   border-radius: 100px;
+   box-shadow: 2px 2px 0px black;
+   background-color: var(--color-pink);
+   padding: 15px 25px;
+   color: white;
+   font-weight: bold;
+   transition: .3s;
+}
+
+.btn1:hover {
+   transform: translate(-4px, -4px);
+   box-shadow: 5px 5px 0px black;
+}
+
+.btn2 {
+   border: 2px solid var(--color-brown);
+   border-radius: 100px;
+   background-color: var(--color-bege);
+   padding: 15px 25px;
+   color: var(--color-brown);
+   font-weight: bold;
+   transition: .3s;
+}
+
+.btn2:hover {
+   transform: translate(-4px, -4px);
+   background-color: var(--color-brown);
+   color: white;
+   box-shadow: 8px 8px 0 var(--shadow);
+}
+
+p {
+   font-size: 1.15rem;
+   color: var(--color-brown);
+   font-weight: 400;
+}
+
+.title {
+   font-family: var(--fonte-title);
+   color: var(--color-brown);
+}
+
+.section {
+   background-color: var(--color-bege);
+   padding: 120px 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 80px;
+   width: 100%;
 }
 
 /* ============================================================
@@ -30,7 +96,7 @@
 
 /* ============================================================
    SEÇÃO 2 — HOME
-   Responsável: (nome)
+   Responsável: (Vitor Moret)
 ============================================================= */
 #home {
 
@@ -39,7 +105,7 @@
 
 /* ============================================================
    SEÇÃO 3 — SOBRE A DELICUP
-   Responsável: (nome)
+   Responsável: (Vitor Ferrer)
 ============================================================= */
 #sobre {
 
@@ -48,7 +114,7 @@
 
 /* ============================================================
    SEÇÃO 4 — PRODUTOS
-   Responsável: (nome)
+   Responsável: (Vitória)
 ============================================================= */
 #produtos {
 
@@ -56,17 +122,17 @@
 
 
 /* ============================================================
-   SEÇÃO 5 — COMO FUNCIONA / DIFERENCIAIS
-   Responsável: (nome)
+   SEÇÃO 5 — DIFERENCIAIS
+   Responsável: (Fernando)
 ============================================================= */
-#como-funciona {
+#diferenciais {
 
 }
 
 
 /* ============================================================
    SEÇÃO 6 — NOSSA HISTÓRIA
-   Responsável: (nome)
+   Responsável: (João Morais)
 ============================================================= */
 #nossa-historia {
 
@@ -75,7 +141,7 @@
 
 /* ============================================================
    SEÇÃO 7 — MISSÃO, VISÃO E VALORES
-   Responsável: (nome)
+   Responsável: (João Paulo)
 ============================================================= */
 #mvv {
 
@@ -84,7 +150,7 @@
 
 /* ============================================================
    SEÇÃO 8 — EQUIPE
-   Responsável: (nome)
+   Responsável: (Cauã)
 ============================================================= */
 #equipe {
 
@@ -96,7 +162,77 @@
    Responsável: (Thiago)
 ============================================================= */
 #contato {
+   display: flex;
+   flex-direction: column;
+   background-image: linear-gradient(45deg, #ff50a1, #b58ce8);
+   padding: 50px;
+}
 
+.contato-content {
+   display: flex;
+   flex-direction: row;
+   gap: 50px;
+   padding-top: 70px;
+}
+
+.contato-fc {
+   color: white;
+   max-width: 600px;
+}
+
+.contato-fc h2 {
+   font-size: 3rem;
+   color: white;
+   padding-bottom: 30px;
+}
+
+.contato-fc p {
+   color: white;
+   padding-bottom: 30px;
+}
+
+.contato-fc li {
+   padding-bottom: 20px;
+   list-style: disc;
+}
+
+.contato-pedido {
+   background-color: var(--color-lightbege);
+   display: flex;
+   flex-direction: column;
+   border: 2px solid var(--color-brown);
+   border-radius: 30px;
+   padding: 30px;
+   max-width: 500px;
+}
+
+#contato a {
+   margin-top: 20px;
+}
+
+.contato-pedido .btn1, .btn2 {
+   text-align: center;
+}
+
+.contato-pedido .btn2 {
+   background-color: var(--color-brown);
+   color: var(--color-lightbege);
+}
+
+.contato-pedido .btn2:hover {
+   background-color: var(--color-lightbege);
+   color: var(--color-brown);
+}
+
+.contato-pedido h3 {
+   font-size: 2rem;
+   padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+   .contato-content {
+      flex-direction: column;
+   }
 }
 
 
