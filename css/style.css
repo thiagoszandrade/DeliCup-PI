@@ -107,8 +107,59 @@ p {
    SEÇÃO 3 — SOBRE A DELICUP
    Responsável: (Vitor Ferrer)
 ============================================================= */
-#sobre {
+#sobre.section {
+  background-color: var(--color-lightbeige);
+  border-bottom: 2px solid var(--color-brown);
+}
 
+.carrossel-container {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+}
+
+.carrossel-img {
+  background-image: url(../images/CupCake-image1.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  border: 2px solid var(--color-brown);
+  border-radius: 20px;
+}
+
+.sobre-txt {
+  width: 100%;
+  max-width: 600px;
+}
+
+#sobre h2 {
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 920px) {
+  #sobre {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carrossel-container {
+    order: 2;
+  }
+
+  .sobre-txt {
+    order: 1;
+    text-align: center;
+  }
+
+  .sobre-img-container {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+  }
 }
 
 
