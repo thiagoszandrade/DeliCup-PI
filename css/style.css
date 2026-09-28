@@ -181,15 +181,95 @@ p {
 }
 
 
-/* ============================================================
-   SEÇÃO 6 — NOSSA HISTÓRIA
-   Responsável: (João Morais)
-============================================================= */
+/* =========================================================
+    SEÇÃO 6 - NOSSA HISTÓRIA
+    Responsável: (João Morais)
+========================================================= */
 #nossa-historia {
-
+    display: flex;
+    flex-direction: column;
 }
 
+.nh-title {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+}
 
+.nh-title h2 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+}
+
+.nh-content1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+}
+
+.nh-content1 h3 {
+    font-size: 2rem;
+    font-family: var(--fonte-title);
+    color: var(--color-pink);
+}
+
+.nh-content2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.nh-cards {
+    background-color: var(--color-lightbege);
+    color: var(--color-pink);
+    border: 2px solid var(--color-brown);
+    border-radius: 20px;
+    box-shadow: 8px 8px 0 var(--shadow);
+    margin: 30px;
+    padding: 20px;
+    max-width: 400px;
+    transition: .3s;
+}
+
+.nh-cards:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 15px 15px 0 var(--shadow);
+}
+
+.nh-cards h3 {
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+.nh-foot {
+    text-align: center;
+    max-width: 600px;
+}
+
+.nh-foot span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nh-foot p {
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .nh-content1 {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .nh-content2 {
+        flex-direction: column;
+    }
+}
 /* ============================================================
    SEÇÃO 7 — MISSÃO, VISÃO E VALORES
    Responsável: (João Paulo)
