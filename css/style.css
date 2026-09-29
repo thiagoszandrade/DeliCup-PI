@@ -414,8 +414,105 @@ p {
    SEÇÃO 8 — EQUIPE
    Responsável: (Cauã)
 ============================================================= */
-#equipe {
+#equipe.section {
+   padding-top: 120px;
+}
 
+#equipe {
+   display: flex;
+   flex-direction: column;
+}
+
+.equipe-title {
+   text-align: center;
+}
+
+.equipe-title h2 {
+   font-size: 2.5rem;
+   padding-bottom: 10px;
+}
+
+.equipe-content {
+   display: flex;
+   flex-direction: row;
+}
+
+.equipe-cards {
+   background-color: var(--color-lightbege);
+   border: 2px solid var(--color-brown);
+   border-radius: 40px;
+   box-shadow: 8px 8px 0 var(--shadow);
+   margin: 10px;
+   padding: 20px;
+   max-width: 400px;
+   justify-items: center;
+   align-items: center;
+   transition: .3s;
+   text-align: center;
+}
+
+.equipe-cards:hover {
+   box-shadow: 15px 15px 0 var(--shadow);
+   transform: translate(-4px, -4px);
+}
+
+.equipe-cards img {
+   display: flex;
+   width: 100%;
+   max-width: 200px;
+   align-self: center;
+}
+
+.equipe-cards h3 {
+   padding: 10px 0;
+   font-size: 1.4rem;
+}
+
+.equipe-cards h4 {
+   color: var(--color-pink);
+   font-family: var(--fonte-title);
+   font-size: 1.2rem;
+   padding-bottom: 10px;
+}
+
+.equipe-content-img {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border: 2px solid var(--color-brown);
+   border-radius: 30px;
+   width: 100%;
+   height: 200px;
+}
+
+#equipe-img1 {
+   background-image: url(../images/FotoEquipe1.jpeg);
+}
+
+#equipe-img2 {
+   background-image: url(../images/FotoEquipe2.jpeg);
+}
+
+#equipe-img3 {
+   background-image: url(../images/FotoEquipe4.jpeg);
+}
+
+#equipe-img4 {
+   background-image: url(../images/FotoEquipe3.jpeg);
+}
+
+@media (max-width: 1280px) {
+   .equipe-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+   }
+}
+
+@media (max-width: 768px) {
+   .equipe-content {
+      grid-template-columns: repeat(1, 1fr);
+   }
 }
 
 
