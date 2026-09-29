@@ -98,8 +98,68 @@ p {
    SEÇÃO 2 — HOME
    Responsável: (Vitor Moret)
 ============================================================= */
-#home {
+#home.section {
+   padding: 150px 30px 60px;
+}
 
+#home img {
+   width: 100%;
+   max-width: 600px;
+}
+
+.home-img {
+   order: 2;
+
+}
+
+#home-txtbtn {
+   max-width: 100%;
+   width: 500px;
+}
+
+.home-txtbtn {
+   padding: 20px 0;
+}
+
+#home-title span {
+   font-family: var(--fonte-titlte);
+   color: var(--color-pink);
+}
+
+#home-title span, h1 {
+   font-size: 3.3rem;;
+}
+
+#home-btn {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 15px;
+}
+
+#home .btn1, .btn2 {
+   font-size: 18px;
+}
+
+@media (max-width: 920px) {
+   #home {
+      flex-direction: column;
+      display: flex;
+      gap: 30px;
+   }
+   
+   #home img {
+      max-width: 100%;
+      width: 400px;
+   }
+
+   .home-img {
+      order: 1;
+   }
+
+   #home-txtbtn {
+      order: 2;
+   }
 }
 
 
