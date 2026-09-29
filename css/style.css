@@ -334,11 +334,82 @@ p {
    SEÇÃO 7 — MISSÃO, VISÃO E VALORES
    Responsável: (João Paulo)
 ============================================================= */
-#mvv {
-
+#mvv.section {
+   padding: 0;
 }
 
+.mvv-content {
+   display: flex;
+   justify-content: space-between;
+}
 
+.mvv-cards { 
+   background-color: var(--color-lightbege);
+   border: 2px solid var(--color-brown);
+   border-radius: 20px;
+   box-shadow: 8px 8px 0 var(--shadow);
+   max-width: 400px;
+   padding: 35px;
+   margin: 30px;
+   transition: .3s;
+}
+
+.mvv-cards:hover {
+   transform: translate(-4px, -4px);
+   box-shadow: 15px 15px 0 var(--shadow);
+}
+
+.mvv-cards h3 {
+   color: var(--color-brown);
+   font-size: 1.7rem;
+   font-family: var(--fonte-title);
+   padding-bottom: 10px;
+}
+
+.mvv-cards li {
+   list-style: disc;
+   padding-bottom: 8px;
+}
+
+.mvv-cards svg{
+   display: block;
+   width: 40px;
+   height: 40px;
+   margin-bottom: 8px;
+   overflow: hidden;
+}
+
+.mvv-cards svg {
+   display: block;
+   width: 40px;
+   height: 40px;
+   margin-bottom: 8px;
+   overflow: visible;
+}
+
+.mvv-icon path {
+   fill: var(--color-pink);
+}
+
+@media (max-width: 1280px) {
+   .mvv-content{
+      flex-direction: column;
+   }
+   .mvv-cards {
+      max-width: 600px;
+   }
+
+   .mvv-cards h3 {
+      justify-self: center;
+   }
+
+   .mvv-cards svg {
+      display: flex;
+      justify-self: center;
+      width: 70px;
+      height: 70px;
+   }
+}
 /* ============================================================
    SEÇÃO 8 — EQUIPE
    Responsável: (Cauã)
