@@ -89,10 +89,113 @@ p {
    Dica: prefixe suas classes com algo tipo .cabecalho-... pra não
    bater com a classe de outra seção (ex: .cabecalho-logo, .cabecalho-menu)
 ============================================================= */
-#cabecalho {
-
+header {
+   position: fixed;
+   width: 100%;
+   height: 100px;
+   align-content: center;
+   border-bottom: 2px dashed var(--color-pink);
+   z-index: 1000;
 }
 
+#cabecalho {
+   background-color: var(--color-bege);
+}
+
+.cabecalho-menu {
+   font-size: clamp(10px, 1.5vw, 18px);
+   color: var(--color-brown);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+#cabecalho img {
+   width: 100%;
+   max-width: 5vw;
+}
+
+.menu-logo {
+   display: flex;
+   align-items: center;
+}
+
+.menu-logo p {
+   font-size: 30px;
+   font-weight: bold;
+   font-family: var(--fonte-title);
+}
+
+.menu-nav ul {
+   display: flex;
+   gap: 50px;
+}
+
+.menu-nav a {
+   color: var(--color-brown);
+   font-weight: bold;
+   transition: .3s;
+}
+
+.menu-nav a:hover {
+   color: var(--color-pink);
+}
+
+.menu-btn {
+   display: none;
+}
+
+@media (max-width: 768px) {
+   .cabecalho-menu {
+      justify-content: space-between;
+      padding: 0px 30px;
+      position: relative;
+   }
+
+   #menuNavegacao {
+      display: none;
+      background-color: var(--color-bege);
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      top: 100%;
+      left: 0;
+   }
+
+   #menuNavegacao ul {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+   }
+
+   #menuNavegacao li a {
+      display: block;
+      border-bottom: 1px solid var(--color-pink);
+      padding: 20px;
+      font-size: 1.2rem;
+   }
+
+   #menuNavegacao.aberto {
+      display: flex;
+      width: 100%;
+   }
+
+   #btn-pedido {
+      display: none;
+   }
+
+   .menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 30px;
+   }
+
+   #menuNavegacao.aberto {
+      display: flex;
+   }
+}
 
 /* ============================================================
    SEÇÃO 2 — HOME
@@ -122,7 +225,7 @@ p {
 }
 
 #home-title span {
-   font-family: var(--fonte-titlte);
+   font-family: var(--fonte-title);
    color: var(--color-pink);
 }
 
@@ -725,6 +828,7 @@ p {
    border-radius: 30px;
    padding: 30px;
    max-width: 500px;
+   align-self: center;
 }
 
 #contato a {
@@ -750,9 +854,28 @@ p {
    padding-bottom: 20px;
 }
 
+.contato-map {
+   width: 100%;
+   max-width: 1150px;
+   height: 200px;
+}
+
+#contato iframe {
+   width: 100%;
+   height: 200px;
+}
+
 @media (max-width: 768px) {
    .contato-content {
       flex-direction: column;
+   }
+
+   .contato-map {
+      height: 600px;
+   }
+
+   #contato iframe {
+      height: 600px;
    }
 }
 
@@ -762,5 +885,93 @@ p {
    Responsável: (Thiago)
 ============================================================= */
 #rodape {
+   border-top: 2px solid var(--color-brown);
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
 
+#rodape.section {
+   padding: 50px 0 20px;
+}
+
+.foot-top {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   gap: 50px;
+   padding: 0 50px;
+}
+
+.foot-logo {
+   display: flex;
+   align-items: center;
+}
+
+.foot-logo p {
+   font-size: 30px;
+   font-weight: bold;
+   font-family: var(--fonte-title);
+   color: var(--color-pink);
+}
+
+.foot-subtitle {
+   font-size: 1.3rem;
+   font-weight: 500;
+}
+
+#rodape img {
+   width: 100%;
+   max-width: 5vw;
+}
+
+.foot-links {
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+}
+
+.foot-links-part {
+   padding: 20px;
+}
+
+.foot-links-part h5 {
+   font-family: var(--fonte-title);
+   font-size: 1.2rem;
+   color: var(--color-brown);
+}
+
+.foot-links-part a {
+   color: var(--color-brown);
+   transition: .3s;
+}
+
+.foot-links-part a:hover {
+   color: var(--color-pink);
+   border-bottom: 1px solid var(--color-pink);
+}
+
+.foot-links-part li {
+   padding-top: 20px;
+}
+
+.copy {
+   padding: 0 100px;
+   width: 100%;
+   text-align: center;
+}
+
+.copy p {
+   border-top: 2px solid var(--color-brown);
+   padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+   .foot-top {
+      flex-direction: column;
+   }
+
+   .foot-links {
+      flex-direction: column;
+   }
 }

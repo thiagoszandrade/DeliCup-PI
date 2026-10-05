@@ -15,7 +15,25 @@
     ============================================================= -->
     <header id="cabecalho">
         <!-- logo, nome do site e menu de navegação aqui -->
-
+        <div class="cabecalho-menu">
+            <div class="menu-logo">
+                <img src="images/DeliCupCake.png" alt="">
+                <p>DeliCup</p>
+            </div>
+            <nav class="menu-nav" id="menuNavegacao">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Sabores</a></li>
+                    <li><a href="#diferenciais">Por que nós</a></li>
+                    <li><a href="#nossa-historia">História</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                </ul>
+            </nav>
+            <div class="menu-pedido">
+                <a href="#contato" class="btn1" id="btn-pedido">Peça o seu</a>
+                <button class="menu-btn" id="menu-btnToggle">☰</button>
+            </div>
+        </div>
     </header>
 
 
@@ -290,7 +308,7 @@
             </div>
         </div>
         <div class="contato-map">
-            <!-- google maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1548.1670680295904!2d-50.436969429547744!3d-22.64925792363746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1788981105258!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
     </section>
 
@@ -299,8 +317,46 @@
          SEÇÃO 10 — RODAPÉ (FOOTER)
          Responsável: (Thiago)
     ============================================================= -->
-    <footer id="rodape">
+    <footer id="rodape" class="section">
         <!-- direitos autorais, links úteis, redes sociais -->
+         <div class="foot-top">
+            <div class="foot-marca">
+                <div class="foot-logo">
+                    <img src="images/DeliCupCake.png" alt="">
+                    <p>DeliCup</p>
+                </div>
+                <p class="foot-subtitle">O sabor que marca gerações.</p>
+            </div>
+            <div class="foot-links">
+                <div class="foot-links-part">
+                    <h5>Cardápio</h5>
+                    <ul>
+                        <li><a href="#">Brigadeiro</a></li>
+                        <li><a href="#">Ninho com Nutella</a></li>
+                        <li><a href="#">Doce de leite</a></li>
+                    </ul>
+                </div>
+                <div class="foot-links-part">
+                    <h5>A marca</h5>
+                    <ul>
+                        <li><a href="#">Nossa história</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Fale conosco</a></li>
+                    </ul>
+                </div>
+                <div class="foot-links-part">
+                    <h5>Peça já</h5>
+                    <ul>
+                        <li><a href="#">iFood</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="#">Retirada no local</a></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+         <div class="copy">
+            <p>&copy; Todos os direitos reservados a DeliCup - 2026</p>
+         </div>
     </footer>
 
     <script src="js/script.js"></script>
