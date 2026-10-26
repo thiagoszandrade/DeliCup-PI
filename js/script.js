@@ -21,7 +21,25 @@ btnToggle.addEventListener('click', () => {
 // SEÇÃO 3 — SOBRE A DELICUP
 // Responsável: (Vitor Ferrer)
 // ============================================================
+const carrosselManualTrack = document.getElementById('carrosselManualTrack')
+const carrosselPrev = document.getElementById('carrosselPrev')
+const carrosselNext = document.getElementById('carrosselNext')
 
+let carrosselManualIndex = 0
+const totalSlidesManual = 3
+
+function irParaSlideManual(index) {
+  carrosselManualIndex = index
+  carrosselManualTrack.style.transform = `translateX(-${index * 100}%)`
+}
+
+carrosselNext.addEventListener('click', () => {
+  irParaSlideManual((carrosselManualIndex + 1) % totalSlidesManual)
+})
+
+carrosselPrev.addEventListener('click', () => {
+  irParaSlideManual((carrosselManualIndex - 1 + totalSlidesManual) % totalSlidesManual)
+})
 
 // ============================================================
 // SEÇÃO 4 — PRODUTOS
