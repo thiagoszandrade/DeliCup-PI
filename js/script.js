@@ -2,7 +2,14 @@
 // SEÇÃO 1 — CABEÇALHO / MENU
 // Responsável: (Thiago)
 // ============================================================
+const btnToggle = document.getElementById('menu-btnToggle')
+const menuNavegacao = document.getElementById('menuNavegacao')
 
+btnToggle.addEventListener('click', () => {
+    const aberto = menuNavegacao.classList.toggle('aberto')
+    btnToggle.setAttribute('arial-expanded', aberto)
+    btnToggle.textContent = aberto ? '✕' : '☰'
+})
 
 // ============================================================
 // SEÇÃO 2 — HOME

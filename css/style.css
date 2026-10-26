@@ -6,12 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: var(--fonte-txt);
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+   font-family: var(--fonte-txt);
+   text-align: justify;
 }
 
 :root {
@@ -89,17 +90,212 @@ p {
    Dica: prefixe suas classes com algo tipo .cabecalho-... pra não
    bater com a classe de outra seção (ex: .cabecalho-logo, .cabecalho-menu)
 ============================================================= */
-#cabecalho {
-
+header {
+   position: fixed;
+   width: 100%;
+   height: 100px;
+   align-content: center;
+   border-bottom: 2px dashed var(--color-pink);
+   z-index: 1000;
 }
 
+#cabecalho {
+   background-color: var(--color-bege);
+}
+
+.cabecalho-menu {
+   font-size: clamp(10px, 1.5vw, 18px);
+   color: var(--color-brown);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+#cabecalho img {
+   width: 100%;
+   max-width: 5vw;
+}
+
+.menu-logo {
+   display: flex;
+}
+
+.menu-logo a {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.menu-logo p {
+   font-size: 30px;
+   font-weight: bold;
+   font-family: var(--fonte-title);
+}
+
+.menu-nav ul {
+   display: flex;
+   gap: 50px;
+}
+
+.menu-nav a {
+   color: var(--color-brown);
+   font-weight: bold;
+   transition: .3s;
+}
+
+.menu-nav a:hover {
+   color: var(--color-pink);
+}
+
+.menu-btn {
+   display: none;
+}
+
+.menu-pedido-mobile {
+   display: none;
+}
+
+@media (max-width: 768px) {
+   .cabecalho-menu {
+      justify-content: space-between;
+      padding: 0px 30px;
+      position: relative;
+   }
+
+   #cabecalho img {
+      max-width: 70px;
+   }
+
+   #menuNavegacao {
+      display: none;
+      background-color: var(--color-bege);
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      top: 100%;
+      left: 0;
+   }
+
+   #menuNavegacao ul {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+   }
+
+   #menuNavegacao li a {
+      display: block;
+      border-bottom: 1px solid var(--color-pink);
+      padding: 20px;
+      font-size: 1.2rem;
+   }
+
+   #menuNavegacao .menu-pedido-mobile {
+      display: block;
+      text-align: center;
+   }
+
+   #menuNavegacao .menu-pedido-mobile a {
+      background-color: var(--color-pink);
+      text-align: center;
+      font-size: 1.2rem;
+      color: white;
+   }
+
+   #menuNavegacao .menu-pedido-mobile a:hover {
+      font-size: 1.5rem;
+   }
+
+   #menuNavegacao.aberto {
+      display: flex;
+      width: 100%;
+   }
+
+   #btn-pedido {
+      display: none;
+   }
+
+   .menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 30px;
+   }
+
+   #menuNavegacao.aberto {
+      display: flex;
+   }
+}
 
 /* ============================================================
    SEÇÃO 2 — HOME
    Responsável: (Vitor Moret)
 ============================================================= */
-#home {
+#home.section {
+   padding: 150px 30px 60px;
+}
 
+#home img {
+   width: 100%;
+   max-width: 600px;
+}
+
+.home-img {
+   order: 2;
+}
+
+#home-txtbtn {
+   max-width: 100%;
+   width: 500px;
+}
+
+.home-txtbtn {
+   padding: 20px 0;
+}
+
+#home-title {
+   text-align: justify;
+}
+
+#home-title span {
+   font-family: var(--fonte-title);
+   color: var(--color-pink);
+}
+
+#home-title span, h1 {
+   font-size: 3.3rem;;
+}
+
+#home-btn {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 15px;
+}
+
+#home .btn1, .btn2 {
+   font-size: 18px;
+}
+
+@media (max-width: 920px) {
+   #home {
+      flex-direction: column;
+      display: flex;
+      gap: 30px;
+   }
+   
+   #home img {
+      max-width: 100%;
+      width: 400px;
+   }
+
+   .home-img {
+      order: 1;
+   }
+
+   #home-txtbtn {
+      order: 2;
+   }
 }
 
 
@@ -177,6 +373,10 @@ p {
   max-width: 600px;
 }
 
+.sobre-txt .title {
+   text-align: left;
+}
+
 #sobre h2 {
   font-size: 2.5rem;
   padding-bottom: 20px;
@@ -197,6 +397,10 @@ p {
     text-align: center;
   }
 
+  .sobre-txt .title {
+   text-align: center;
+  }
+
   .sobre-img-container {
     width: 100%;
     max-width: 400px;
@@ -209,8 +413,84 @@ p {
    SEÇÃO 4 — PRODUTOS
    Responsável: (Vitória)
 ============================================================= */
-#produtos {
+#produtos.section {
+   flex-direction: column;
+}
 
+.produtos-titulo {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.produtos-titulo h2 {
+   font-size: 2.5rem;
+   padding-bottom: 20px;
+}
+
+.produtos-titulo p {
+   width: 100%;
+   max-width: 700px;
+   text-align: center;
+}
+
+.produtos-card-container {
+   display: flex;
+   align-items: center;
+}
+
+.produtos-cards {
+   display: flex;
+   background-color: var(--color-lightbege);
+   border: 2px solid var(--color-brown);
+   border-radius: 25px;
+   box-shadow: 8px 8px 0 var(--shadow);
+   flex-direction: column;
+   align-content: space-between;
+   margin: 20px;
+   padding: 20px;
+   width: 100%;
+   max-width: 400px;
+   height: 400px;
+   transition: .3s;
+}
+
+.produtos-cards:hover {
+   transform: translate(-4px, -4px);
+   box-shadow: 15px 15px 0 var(--shadow);
+}
+
+.produtos-img {
+   background-image: url('../images/CupCake-image1.jpg');
+   background-size: cover;
+   background-position: center;
+   border: 2px solid var(--color-brown);
+   border-radius: 15px;
+   width: 100%;
+   height: 150px;
+}
+
+.produtos-cards .title {
+   font-size: 1.5rem;
+   padding-top: 20px;
+}
+
+.produtos-cards p {
+   padding-top: 10px;
+}
+
+.produtos-cards h4 {
+   padding: 20px 0px 10px;  
+}
+
+@media (max-width: 920px) {
+   .produtos-titulo {
+      text-align: center;
+   }
+
+   .produtos-card-container {
+      flex-direction: column;
+   }
 }
 
 
@@ -219,34 +499,378 @@ p {
    Responsável: (Fernando)
 ============================================================= */
 #diferenciais {
+   background-color: var(--color-brown);
+   color: var(--color-bege);
+}
 
+#diferenciais p {
+   color: var(--color-bege);
+}
+
+#diferenciais h2, h3 {
+   font-family: var(--fonte-title);
+}
+
+#diferenciais h2 {
+   font-size: 2.5rem;
+}
+
+#diferenciais h3 {
+   padding: 10px 0;
+   font-size: 1.5rem;
+   text-align: left;
+}
+
+#diferenciais.section {
+   flex-direction: column;
+}
+
+.dif-container-card {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 50px;
+   max-width: 100%;
+}
+
+.dif-card {
+   background-color: var(--color-lightbrown);
+   border: 2px solid var(--color-bege);
+   border-radius: 20px;
+   max-width: 100%;
+   width: 250px;
+   padding: 20px;
+}
+
+.dif-card svg {
+   display: block;
+   width: 48px;
+   height: 48px;
+   margin-bottom: 12px;
+   overflow: visible;
+}
+
+.dif-icon-fill path {
+   fill: var(--color-pink);
+}
+
+.dif-icon-stroke path {
+   fill: none;
+   stroke: var(--color-pink);
 }
 
 
-/* ============================================================
-   SEÇÃO 6 — NOSSA HISTÓRIA
-   Responsável: (João Morais)
-============================================================= */
+@media (max-width: 1280px) {
+   .dif-title {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+      width: 100%;
+      max-width: 1000px;
+   }
+
+   .dif-container-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 60px;
+   }
+
+   .dif-card {
+      width: 350px;
+   }
+}
+
+@media (max-width: 768px) {
+   .dif-container-card {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+
+/* =========================================================
+    SEÇÃO 6 - NOSSA HISTÓRIA
+    Responsável: (João Morais)
+========================================================= */
 #nossa-historia {
-
+    display: flex;
+    flex-direction: column;
 }
 
+.nh-title {
+   justify-content: center;
+   text-align: center;
+   width: 100%;
+   max-width: 900px;
+   padding: 40px;
+}
 
+.nh-title .title {
+   text-align: center;
+}
+
+.nh-title h2 {
+   font-size: 2.5rem;
+   padding-bottom: 20px;
+}
+
+.nh-content1 {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 30px;
+   text-align: center;
+}
+
+.nh-content1 h3 {
+   text-align: center;
+   font-size: 2rem;
+   font-family: var(--fonte-title);
+   color: var(--color-pink);
+}
+
+.nh-content2 {
+   display: flex;
+   flex-direction: row;
+}
+
+.nh-cards {
+   background-color: var(--color-lightbege);
+   color: var(--color-pink);
+   border: 2px solid var(--color-brown);
+   border-radius: 20px;
+   box-shadow: 8px 8px 0 var(--shadow);
+   margin: 30px;
+   padding: 20px;
+   max-width: 400px;
+   transition: .3s;
+}
+
+.nh-cards:hover {
+   transform: translate(-4px, -4px);
+   box-shadow: 15px 15px 0 var(--shadow);
+}
+
+.nh-cards h3 {
+   padding: 10px 0;
+   font-size: 1.2rem;
+}
+
+.nh-foot {
+   text-align: center;
+   max-width: 600px;
+}
+
+.nh-foot span {
+   font-size: 1.2rem;
+   font-weight: 500;
+}
+
+.nh-foot p {
+   padding-bottom: 20px;
+   font-size: 1.2rem;
+   font-weight: 500;
+   text-align: center;
+}
+
+@media (max-width: 768px) {
+   .nh-content1 {
+      flex-direction: column;
+      gap: 50px;
+   }
+
+   .nh-content2 {
+      flex-direction: column;
+   }
+}
 /* ============================================================
    SEÇÃO 7 — MISSÃO, VISÃO E VALORES
    Responsável: (João Paulo)
 ============================================================= */
-#mvv {
-
+#mvv.section {
+   padding: 0;
 }
 
+.mvv-content {
+   display: flex;
+   justify-content: space-between;
+}
 
+.mvv-cards { 
+   background-color: var(--color-lightbege);
+   border: 2px solid var(--color-brown);
+   border-radius: 20px;
+   box-shadow: 8px 8px 0 var(--shadow);
+   max-width: 400px;
+   padding: 35px;
+   margin: 30px;
+   transition: .3s;
+}
+
+.mvv-cards:hover {
+   transform: translate(-4px, -4px);
+   box-shadow: 15px 15px 0 var(--shadow);
+}
+
+.mvv-cards h3 {
+   color: var(--color-brown);
+   font-size: 1.7rem;
+   font-family: var(--fonte-title);
+   padding-bottom: 10px;
+}
+
+.mvv-cards li {
+   list-style: disc;
+   padding-bottom: 8px;
+}
+
+.mvv-cards svg{
+   display: block;
+   width: 40px;
+   height: 40px;
+   margin-bottom: 8px;
+   overflow: hidden;
+}
+
+.mvv-cards svg {
+   display: block;
+   width: 40px;
+   height: 40px;
+   margin-bottom: 8px;
+   overflow: visible;
+}
+
+.mvv-icon path {
+   fill: var(--color-pink);
+}
+
+@media (max-width: 1280px) {
+   .mvv-content{
+      flex-direction: column;
+   }
+   .mvv-cards {
+      max-width: 600px;
+   }
+
+   .mvv-cards h3 {
+      justify-self: center;
+   }
+
+   .mvv-cards svg {
+      display: flex;
+      justify-self: center;
+      width: 70px;
+      height: 70px;
+   }
+}
 /* ============================================================
    SEÇÃO 8 — EQUIPE
    Responsável: (Cauã)
 ============================================================= */
-#equipe {
+#equipe.section {
+   padding-top: 120px;
+}
 
+#equipe {
+   display: flex;
+   flex-direction: column;
+}
+
+.equipe-title {
+   text-align: center;
+}
+.equipe-title .title {
+   text-align: center;
+}
+
+.equipe-title h2 {
+   font-size: 2.5rem;
+   padding-bottom: 10px;
+}
+
+.equipe-content {
+   display: flex;
+   flex-direction: row;
+}
+
+.equipe-cards {
+   background-color: var(--color-lightbege);
+   border: 2px solid var(--color-brown);
+   border-radius: 40px;
+   box-shadow: 8px 8px 0 var(--shadow);
+   margin: 10px;
+   padding: 20px;
+   max-width: 400px;
+   justify-items: center;
+   align-items: center;
+   transition: .3s;
+   text-align: center;
+}
+
+.equipe-cards:hover {
+   box-shadow: 15px 15px 0 var(--shadow);
+   transform: translate(-4px, -4px);
+}
+
+.equipe-cards img {
+   display: flex;
+   width: 100%;
+   max-width: 200px;
+   align-self: center;
+}
+
+.equipe-cards h3 {
+   padding: 10px 0;
+   font-size: 1.4rem;
+}
+
+.equipe-cards h4 {
+   color: var(--color-pink);
+   font-family: var(--fonte-title);
+   font-size: 1.2rem;
+   padding-bottom: 10px;
+}
+
+.equipe-content-img {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border: 2px solid var(--color-brown);
+   border-radius: 30px;
+   width: 100%;
+   height: 200px;
+}
+
+#equipe-img1 {
+   background-image: url(../images/FotoEquipe1.jpeg);
+}
+
+#equipe-img2 {
+   background-image: url(../images/FotoEquipe2.jpeg);
+}
+
+#equipe-img3 {
+   background-image: url(../images/FotoEquipe4.jpeg);
+}
+
+#equipe-img4 {
+   background-image: url(../images/FotoEquipe3.jpeg);
+}
+
+@media (max-width: 1280px) {
+   .equipe-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+   }
+}
+
+@media (max-width: 768px) {
+   .equipe-content {
+      grid-template-columns: repeat(1, 1fr);
+   }
 }
 
 
@@ -268,6 +892,10 @@ p {
    padding-top: 70px;
 }
 
+.contato-content .title {
+   text-align: left;
+}
+
 .contato-fc {
    color: white;
    max-width: 600px;
@@ -284,19 +912,57 @@ p {
    padding-bottom: 30px;
 }
 
+.contato-fc ul {
+   background-color: var(--color-lightbege);
+   border: 2px solid var(--color-brown);
+   border-radius: 30px;
+   max-width: 400px;
+   padding: 30px;
+   align-items: center;
+}
+
+.contato-fc ul img {
+   width: 40px;
+   height: auto;
+}
+
 .contato-fc li {
-   padding-bottom: 20px;
+   padding-bottom: 5px;
    list-style: disc;
 }
 
+.contato-fc li a {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   color: var(--color-brown);
+   font-weight: 500;
+   font-size: 1.2rem;
+   transition: .3s;
+}
+
+.contato-fc li a:hover {
+   transform: scale(1.05);
+}
+
 .contato-pedido {
-   background-color: var(--color-lightbege);
    display: flex;
    flex-direction: column;
+   background-color: var(--color-lightbege);
    border: 2px solid var(--color-brown);
    border-radius: 30px;
    padding: 30px;
    max-width: 500px;
+   justify-content: space-around;
+}
+
+.contato-pedido-btn {
+   display: flex;
+   flex-direction: column;
+}
+
+.contato-pedido a {
+   align-items: center;
 }
 
 #contato a {
@@ -305,6 +971,8 @@ p {
 
 .contato-pedido .btn1, .btn2 {
    text-align: center;
+   align-content: center;
+   font-size: 1.2rem;
 }
 
 .contato-pedido .btn2 {
@@ -322,9 +990,43 @@ p {
    padding-bottom: 20px;
 }
 
+.contato-map {
+   width: 100%;
+   max-width: 1150px;
+   height: 200px;
+}
+
+#contato iframe {
+   width: 100%;
+   height: 200px;
+}
+
 @media (max-width: 768px) {
    .contato-content {
       flex-direction: column;
+      align-items: center;
+      display: flex;
+   }
+
+   .contato-fc .title {
+      text-align: center;
+   }
+
+   .contato-fc ul {
+      margin: auto;
+      max-width: 100%;
+   }
+
+   .contato-pedido {
+      max-width: 100%;
+   }
+
+   .contato-map {
+      height: 600px;
+   }
+
+   #contato iframe {
+      height: 600px;
    }
 }
 
@@ -334,5 +1036,104 @@ p {
    Responsável: (Thiago)
 ============================================================= */
 #rodape {
+   border-top: 2px solid var(--color-brown);
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
 
+#rodape.section {
+   padding: 50px 0 20px;
+}
+
+.foot-top {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   gap: 80px;
+   padding: 0 50px;
+}
+
+.foot-logo {
+   display: flex;
+}
+
+.foot-logo a {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.foot-logo p {
+   font-size: 30px;
+   font-weight: bold;
+   font-family: var(--fonte-title);
+   color: var(--color-pink);
+}
+
+.foot-subtitle {
+   font-size: 1.3rem;
+   font-weight: 500;
+}
+
+#rodape img {
+   width: 100%;
+   max-width: 5vw;
+}
+
+.foot-links {
+   display: flex;
+   flex-direction: row;
+   gap: 80px;
+}
+
+.foot-links-part {
+   padding: 20px;
+}
+
+.foot-links-part h5 {
+   font-family: var(--fonte-title);
+   font-size: 1.2rem;
+   color: var(--color-brown);
+}
+
+.foot-links-part a {
+   color: var(--color-brown);
+   transition: .3s;
+}
+
+.foot-links-part a:hover {
+   color: var(--color-pink);
+   border-bottom: 1px solid var(--color-pink);
+}
+
+.foot-links-part li {
+   padding-top: 20px;
+}
+
+.copy {
+   padding: 0 100px;
+   width: 100%;
+}
+
+.copy p {
+   border-top: 2px solid var(--color-brown);
+   padding-top: 20px;
+   text-align: center;
+}
+
+@media (max-width: 768px) {
+   #rodape img {
+      max-width: 80px;
+   }
+
+   .foot-top {
+      flex-direction: column;
+      gap: 40px;
+   }
+
+   .foot-links {
+      flex-direction: column;
+      gap: 40px;
+   }
 }

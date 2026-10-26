@@ -15,7 +15,28 @@
     ============================================================= -->
     <header id="cabecalho">
         <!-- logo, nome do site e menu de navegação aqui -->
-
+        <div class="cabecalho-menu">
+            <div class="menu-logo">
+                <a href="#home">
+                    <img src="images/DeliCupCake.png" alt="">
+                    <p>DeliCup</p>
+                </a>
+            </div>
+            <nav class="menu-nav" id="menuNavegacao">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Sabores</a></li>
+                    <li><a href="#diferenciais">Por que nós</a></li>
+                    <li><a href="#nossa-historia">História</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li class="menu-pedido-mobile"><a href="#contato" >Peça o seu</a></li>
+                </ul>
+            </nav>
+            <div class="menu-pedido">
+                <a href="#contato" class="btn1" id="btn-pedido">Peça o seu</a>
+                <button class="menu-btn" id="menu-btnToggle">☰</button>
+            </div>
+        </div>
     </header>
 
 
@@ -23,24 +44,25 @@
          SEÇÃO 2 — HOME
          Responsável: (Vitor Moret)
     ============================================================= -->
-    <section id="home">
+    <section id="home" class="section">
         <!-- título de impacto, frase curta e talvez um botão -->
-        <div>
-            <img src="" alt="">
+        <div class="home-img">
+            <img src="images/DeliCupLogo.png" alt="">
         </div>
-        <div>
-            <div>
-                <h1>Cupcake bom é igual fita cassete boa: <span>ninguem esquece</span></h1>
+        <div id="home-txtbtn">
+            <div class="home-txtbtn" id="home-title">
+                <h1 class="title">Cupcake bom é igual fita cassete boa: <br><span>ninguém esquece</span></br></h1>
             </div>
-            <div>
-                <p>Cupcakes artesanais de brigadeiro e doce de leite, pensados para quem sente saudade dods anosss 2000 e ainda acredita que um docinho bem-feito resolve o dia.</p>
+            <div class="home-txtbtn" id="home-txt">
+                <p>Cupcakes artesanais de brigadeiro e doce de leite, pensados para quem sente saudade dos anos 2000 e ainda acredita que um docinho bem-feito resolve o dia.</p>
             </div>
-            <div>
-                <a href="#">Ver os sabores</a>
-                <a href="#">Conheça nossa história</a>
+            <div class="home-txtbtn" id="home-btn">
+                <a href="#produtos" class="btn1">Ver os sabores</a>
+                <a href="#nossa-historia" class="btn2">Conheça nossa história</a>
             </div>
         </div>
     </section>
+
 
 
     <!-- ============================================================
@@ -69,30 +91,30 @@
          SEÇÃO 4 — PRODUTOS
          Responsável: (Vitória)
     ============================================================= -->
-    <section id="produtos">
+    <section id="produtos" class="section">
         <!-- cards com os produtos/itens oferecidos -->
-        <div>
-            <h2> Três sabores, uma memória cada</h2>   
-            <p> Cada receita foi ajustada até chegar no ponto exato entre a textura de padaria de bairro e o acompanhamento de confeitaria fina.</p>
+        <div class="produtos-titulo">
+            <h2 class="title">Três sabores, uma memória cada</h2>
+            <p>Cada receita foi ajustada até chegar ao ponto exato entre a textura de padaria de bairro e o acompanhamento de confeitaria fina.</p>
         </div>
-        </div>
+        <div class="produtos-card-container">
+            <div class="produtos-cards">
+                <div class="produtos-img"></div>
+                <h3 class="title">Brigadeiro</h3>
+                <p>Massa fofinha de chocolate com cobertura aveludada de brigadeiro tradicional e granulado crocante por cima.</p>
+                <h4>R$ Preço</h4>
             </div>
-                <img src="" alt="">
-                <h3>Brigadeiro</h3>
-                <p> Massa fofinha de chocolate com cobertura aveludada de brigadeiro tradicional e granulado crocante por cima. </p>
-                <h4>R$ Preço </h4>
-            </div> 
+            <div class="produtos-cards">
+                <div class="produtos-img"></div>
+                <h3 class="title">Ninho com Nutella</h3>
+                <p>Base leve de leite em pó recheada com Nutella e finalizada com um brigadeiro de ninho cremoso.</p>
+                <h4>R$ Preço</h4>
             </div>
-                <img src="" alt="">
-                <h3>Ninho com Nutella</h3>
-                <p> Base leve de leite em pó recheada com Nutella e finalizada com um brigadeiro de ninho cremoso. </p>
-                <h4>R$ Preço </h4>
-            </div>
-            </div>
-                <img scr="" alt="">
-                <h3>Doce de Leite</h3>
+            <div class="produtos-cards">
+                <div class="produtos-img"></div>
+                <h3 class="title">Doce de leite</h3>
                 <p>Massa amanteigada com recheio de doce de leite artesanal e cobertura encorpada, sem exagero no doce.</p>
-                <h4>R$ Preço </h4>
+                <h4>R$ Preço</h4>
             </div>
         </div>
     </section>
@@ -102,32 +124,40 @@
          SEÇÃO 5 — DIFERENCIAIS
          Responsável: (Fernando)
     ============================================================= -->
-    <section id="diferenciais">
-        <!-- passo a passo ou pontos fortes do serviço -->
-        <div>
-            <h2>Por que escolher a Delicup</h2>
-            <p>Nós não vendemos apenas cupcakes, oferecemos uma pausa de cinco minutos que parece ter voltado no tempo</p>
+    <section id="diferenciais" class="section">
+        <!-- pontos fortes do serviço -->
+        <div class="dif-title">
+            <h2>Por que escolher a DeliCup</h2>
+            <p>Nós não vendemos apenas cupcakes, oferecemos uma pausa de cinco minutos que parece ter voltado no tempo.</p>
         </div>
-        <div>
-            <div>
-                <img src="" alt="">
+        <div class="dif-container-card">
+            <div class="dif-card">
+                <svg class="dif-img-ex dif-icon-fill" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M56.745 49.696c-9.055-6.69-10.482-6.958-14.822-11.298c-3.314-3.314-5.576-5.575-10.414-10.416c-3.139-3.137-.436-11.009-8.596-19.173C17.114 3.012 7.606-.18 3.712 3.71C-.183 7.605 3.013 17.117 8.81 22.915c8.163 8.159 16.035 5.455 19.174 8.595c4.84 4.838 7.101 7.1 10.414 10.415c4.34 4.34 4.608 5.768 11.297 14.821c3.306 4.482 6.474 7.332 10.429 3.377c3.952-3.952 1.102-7.12-3.379-10.427M25.341 24.391c-1.201 1.203-2.884 1.754-4.791 1.738c-.182-.045-.359-.084-.544-.129c2.753-5.176 1.013-13.155-4.378-20.103a21.995 21.995 0 0 1 6.267 4.363c3.313 3.313 4.829 6.461 5.185 9.31c.237 1.911-.532 3.614-1.739 4.821"></path>
+                </svg>
                 <h3>Sabor de casa</h3>
-                <p>Brigadeiro e doce de leite feitos do jeito que a sua avó faria, sem atalho</p>
+                <p>Brigadeiro e doce de leite feitos do jeito que a sua avó faria, sem atalho.</p>
             </div>
-            <div>
-                <img src="" alt="">
+            <div class="dif-card">
+                <svg class="dif-img-ex dif-icon-stroke" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path id="Vector" d="M19 14L18.1963 19.6263C18.1267 20.1134 18.0917 20.3573 17.9741 20.5405C17.8705 20.7019 17.7228 20.8299 17.5483 20.9097C17.3506 21 17.1051 21 16.6147 21H14M19 14H14M19 14C20.3031 13.3956 21 11.7637 21 10.3335C21 8.79807 19.9706 7.48314 18.5098 6.93701C18.197 6.8201 18 6.51809 18 6.2085C18 4.94284 16.8807 3.9165 15.5 3.9165C15.2737 3.9165 15.0546 3.94406 14.8462 3.99571C14.414 4.1028 13.9305 4.0791 13.5586 3.85059C12.6841 3.31321 11.6319 3 10.5 3C7.46243 3 5 5.25723 5 8.04167C5 8.39362 4.77089 8.71567 4.44287 8.8986C3.57772 9.38108 3 10.254 3 11.2502C3 12.5275 3.71228 13.6908 5 14M5 14L5.80375 19.6263L5.80387 19.6276C5.87335 20.1139 5.90813 20.3574 6.02562 20.5405C6.12922 20.7019 6.27719 20.8299 6.45166 20.9097C6.64932 21 6.89485 21 7.38528 21H10M5 14H10M10 14H14M10 14V21M14 14V21M14 21H10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
                 <h3>Porção individual</h3>
-                <p>Do tamanho certo para um lanche, um presente ou uma mesa de festa</p>
+                <p>Do tamanho certo para um lanche, um presente ou uma mesa de festa.</p>
             </div>
-            <div>
-                <img src="" alt="">
+            <div class="dif-card">
+                <svg class="dif-img-ex dif-icon-stroke" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 22V17M4.5 7V2M2 4.5H7M2 19.5H7M13 3L11.2658 7.50886C10.9838 8.24209 10.8428 8.60871 10.6235 8.91709C10.4292 9.1904 10.1904 9.42919 9.91709 9.62353C9.60871 9.84281 9.24209 9.98381 8.50886 10.2658L4 12L8.50886 13.7342C9.24209 14.0162 9.60871 14.1572 9.91709 14.3765C10.1904 14.5708 10.4292 14.8096 10.6235 15.0829C10.8428 15.3913 10.9838 15.7579 11.2658 16.4911L13 21L14.7342 16.4911C15.0162 15.7579 15.1572 15.3913 15.3765 15.0829C15.5708 14.8096 15.8096 14.5708 16.0829 14.3765C16.3913 14.1572 16.7579 14.0162 17.4911 13.7342L22 12L17.4911 10.2658C16.7579 9.98381 16.3913 9.8428 16.0829 9.62353C15.8096 9.42919 15.5708 9.1904 15.3765 8.91709C15.1572 8.60871 15.0162 8.24209 14.7342 7.50886L13 3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
                 <h3>Estética Y2K</h3>
-                <p>Embalagem e identidade visual inspiradas na década que voltou a bombar</p>
+                <p>Embalagem e identidade visual inspiradas na década que voltou a bombar.</p>
             </div>
-            <div>
-                <img src="" alt="">
+            <div class="dif-card">
+                <svg class="dif-img-ex dif-icon-fill" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.436,12.891L3.382,27h1.811l4.69-1.876L12.698,27h1.17l2-14h0.266l2,14h1.17l2.815-1.876L26.807,27h1.811l-7.055-14.109L26,14h2V4h-2l-6,1.5V5h-8v0.5L6,4H4v10h2L10.436,12.891z M20,7.562l6-1.5v5.877l-6-1.5V7.562zM19.382,13l5.547,11.095l-3.046-1.219l-2.117,1.412L18.153,13H19.382z M14,7h4v4h-4V7z M12.618,13h1.229l-1.613,11.288l-2.117-1.412l-3.046,1.219L12.618,13z M6,6.062l6,1.5v2.877l-6,1.5V6.062z"/>
+                </svg>
                 <h3>Feito por encomenda</h3>
-                <p>Produção artesanal em pequenos lotes, sempre fresquinhos</p>
+                <p>Produção artesanal em pequenos lotes, sempre fresquinhos.</p>
             </div>
         </div>
     </section>
@@ -137,14 +167,14 @@
          SEÇÃO 6 — NOSSA HISTÓRIA
          Responsável: (João Morais)
     ============================================================= -->
-    <section id="nossa-historia">
+    <section id="nossa-historia" class="section">
         <!-- descrição da empresa -->
-        <div>
-            <h2>Nossa história</h2>
+        <div class="nh-title">
+            <h2 class="title">Nossa história</h2>
             <p>A DeliCup nasceu do desejo de resgatar o sabor e as memórias que marcaram uma geração. Inspirada nos doces, momentos e na nostalgia dos anos 2000, a marca transforma cupcakes artesanais em experiências de afeto e conexão. Mais do que um doce, cada cupcake busca trazer de volta a sensação de momentos simples e especiais, conectando sabores, pessoas e gerações.</p>
         </div>
-        <div>
-            <div>
+        <div class="nh-content1">
+            <div class="">
                 <h3>3</h3>
                 <span>sabores autorais</span>
             </div>
@@ -157,21 +187,21 @@
                 <span>ano de fundação</span>
             </div>
         </div>
-        <div>
-            <div>
+        <div class="nh-content2">
+            <div class="nh-cards">
                 <h3>2000</h3>
                 <p>O cupcake vira fenômeno pop no mundo todo, impulsionado pela cena icônica de Sex and the City.</p>
             </div>
-            <div>
+            <div class="nh-cards">
                 <h3>2005-2009</h3>
                 <p>O doce chega ao Brasil e vira febre em festas e confeitarias, ganhando sabores bem brasileiros.</p>
             </div>
-            <div>
+            <div class="nh-cards">
                 <h3>2026</h3>
                 <p>Nasce a DeliCup, unindo essa nostalgia ao sabor de brigadeiro e doce de leite feitos à mão.</p>
             </div>
         </div>
-        <div>
+        <div class="nh-foot">
             <p>“Mais do que vender cupcakes, queremos devolver pra cada cliente um pedacinho da própria infância.”</p>
             <span>Fundadores da DeliCup</span>
         </div>
@@ -181,21 +211,27 @@
          SEÇÃO 7 — MISSÃO, VISÃO E VALORES
          Responsável: (João Paulo)
     ============================================================= -->
-    <section id="mvv">
+    <section id="mvv" class="section">
         <!-- pontos fortes da empresa com missão, visão e valores -->
-        <div>
-            <div>
-                <img src="" alt="">
+        <div class="mvv-content">
+            <div class="mvv-cards">
+                <svg class="mvv-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path d="m226-559 78 33q14-28 29-54t33-52l-56-11-84 84Zm142 83 114 113q42-16 90-49t90-75q70-70 109.5-155.5T806-800q-72-5-158 34.5T492-656q-42 42-75 90t-49 90Zm155-121.5q0-33.5 23-56.5t57-23q34 0 57 23t23 56.5q0 33.5-23 56.5t-57 23q-34 0-57-23t-23-56.5ZM565-220l84-84-11-56q-26 18-52 32.5T532-299l33 79Zm313-653q19 121-23.5 235.5T708-419l20 99q4 20-2 39t-20 33L538-80l-84-197-171-171-197-84 167-168q14-14 33.5-20t39.5-2l99 20q104-104 218-147t235-24ZM157-321q35-35 85.5-35.5T328-322q35 35 34.5 85.5T327-151q-25 25-83.5 43T82-76q14-103 32-161.5t43-83.5Zm57 56q-10 10-20 36.5T180-175q27-4 53.5-13.5T270-208q12-12 13-29t-11-29q-12-12-29-11.5T214-265Z"/>
+                </svg>
                 <h3>Missão</h3>
-                <p>Produzir cupcakes artesanais que despertem emoções, criem memórias e aproximem as pessoas por meio de sabores autênticos e de alta qualidade</p>
+                <p>Produzir cupcakes artesanais que despertem emoções, criem memórias e aproximem as pessoas por meio de sabores autênticos e de alta qualidade.</p>
             </div>
-            <div>
-                <img src="" alt="">
+            <div class="mvv-cards">
+                <svg class="mvv-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/>       
+                </svg>  
                 <h3>Visão</h3>
-                <p>Tornar-se referência nacional em cupcakes nostálgicos que conectam gerações, expedindo sua presença por todo Brasil e, futuramente, para o mercado internacional</p>
+                <p>Tornar-se referência nacional em cupcakes nostálgicos que conectam gerações, expandindo sua presença por todo o Brasil e, futuramente, para o mercado internacional.</p>
             </div>
-            <div>
-                <img src="" alt="">
+            <div class="mvv-cards">
+                <svg class="mvv-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">  
+                    <path d="M480-120 80-600l120-240h560l120 240-400 480Zm-95-520h190l-60-120h-70l-60 120Zm55 347v-267H218l222 267Zm80 0 222-267H520v267Zm144-347h106l-60-120H604l60 120Zm-474 0h106l60-120H250l-60 120Z"/>
+                </svg>  
                 <h3>Valores</h3>
                 <ul>
                     <li>Qualidade sem concessões</li>
@@ -205,7 +241,7 @@
                     <li>Respeito às tradições com um olhar contemporâneo</li>
                 </ul>
             </div>
-        </div>  
+        </div>      
     </section>
 
 
@@ -213,33 +249,41 @@
          SEÇÃO 8 — EQUIPE
          Responsável: (Cauã)
     ============================================================= -->
-    <section id="equipe">
+    <section id="equipe" class="section">
         <!-- Descrição da equipe de GCOM -->
-        <div>
-            <h2>Quem faz a DeliCup</h2>
+        <div class="equipe-title">
+            <h2 class="title">Quem faz a DeliCup</h2>
             <p>Um time apaixonado por confeitaria, marca e pela nostalgia dos anos 2000.</p>
         </div>
-        <div>
-            <div>
-                <img src="images/FotoEquipe1.jpeg" alt="">
+        <div class="equipe-content">
+            <div class="equipe-cards">
+                <div id="equipe-img1" class="equipe-content-img">
+                    <span class="equipe-img"></span>
+                </div>
                 <h3>Édson Carlos Lucas Gonçalves</h3>
                 <h4>Chef Executivo</h4>
                 <p>Confeitaria e desenvolvimento de cupcakes. Responsável pela criação, desenvolvimento e padronização dos cupcakes, sabores, receitas, apresentação e excelência dos produtos DeliCup.</p>
             </div>
-            <div>
-                <img src="images/FotoEquipe2.jpeg" alt="">
+            <div class="equipe-cards">
+                <div id="equipe-img2" class="equipe-content-img">
+                    <span class="equipe-img"></span>
+                </div>
                 <h3>Henrique de Souza Carneiro</h3>
                 <h4>Especialista em Vendas & Atendimento</h4>
                 <p>Experiência do cliente e produtos DeliCup. Profissional com ampla experiência em vendas, atendimento personalizado e conhecimento do portfólio DeliCup, auxiliando cada cliente na escolha do cupcake ideal.</p>
             </div>
-            <div>
-                <img src="images/FotoEquipe4.jpeg" alt="">
+            <div class="equipe-cards">
+                <div id="equipe-img3" class="equipe-content-img">
+                    <span class="equipe-img"></span>
+                </div>
                 <h3>João Gabriel de Souza Silva</h3>
                 <h4>Gerente Geral</h4>
                 <p>Gestão de operações e experiência do cliente. Responsável pela gestão da loja, liderança da equipe, organização das operações e garantia dos padrões de atendimento e qualidade DeliCup.</p>
             </div>
-            <div>
-                <img src="images/FotoEquipe3.jpeg" alt="">
+            <div class="equipe-cards">
+                <div id="equipe-img4" class="equipe-content-img">
+                    <span class="equipe-img"></span>
+                </div>
                 <h3>Weverton Rabelo Tonelo</h3>
                 <h4>CEO & Fundador</h4>
                 <p>Estratégia e desenvolvimento da marca. Responsável pela visão, estratégia, posicionamento e crescimento da DeliCup, conduzindo o desenvolvimento da marca e a evolução do negócio.</p>
@@ -258,22 +302,36 @@
             <div class="contato-fc">
                 <h2 class="title">Fale com a gente</h2>
                 <p>Tem uma encomenda, uma dúvida sobre sabores ou quer levar a DeliCup para sua festa? É só chamar!</p>
-                <ul>
-                    <li>(18) 99999-9999 - WhatsApp</li>
-                    <li>contato@delicup.com.br</li>
-                    <li>Assis, SP</li>
-                    <li>@deli_cup.oficial</li>
-                </ul>
+                <div class="contato-list">
+                    <ul>
+                        <li>
+                            <a href="" target="_blank"> <img src="images/wpp.png" alt="WhatsApp">(18) 99999-9999 - WhatsApp</a>
+                        </li>
+                        <li>
+                            <a href="mailto:contato@delicup.com.br" target="_blank"><img src="images/gmail.png" alt="">contato@delicup.com.br</a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/E7LiiBeK2QfviVY9A" target="_blank"><img src="images/map.png" alt="">Assis, SP</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/deli_cup.oficial/" target="_blank"><img src="images/instagram.png" alt="">@deli_cup.oficial</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="contato-pedido">
-                <h3 class="title">Peça o seu cupcake</h3>
-                <p>Escolha o canal mais rápido para garantir seu docinho de infância ainda hoje.</p>
-                <a href="#" class="btn1">Pedir pelo iFood</a>
-                <a href="#" class="btn2">Chamar no WhatsApp</a>
+                <div class="contato-pedido-txt">
+                    <h3 class="title">Peça o seu cupcake</h3>
+                    <p>Escolha o canal mais rápido para garantir seu docinho de infância ainda hoje.</p>
+                </div>
+                <div class="contato-pedido-btn">
+                    <a href="#" class="btn1">Pedir pelo iFood</a>
+                    <a href="#" class="btn2">Chamar no WhatsApp</a>
+                </div>
             </div>
         </div>
         <div class="contato-map">
-            <!-- google maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1548.1670680295904!2d-50.436969429547744!3d-22.64925792363746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1788981105258!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
     </section>
 
@@ -282,8 +340,48 @@
          SEÇÃO 10 — RODAPÉ (FOOTER)
          Responsável: (Thiago)
     ============================================================= -->
-    <footer id="rodape">
+    <footer id="rodape" class="section">
         <!-- direitos autorais, links úteis, redes sociais -->
+         <div class="foot-top">
+            <div class="foot-marca">
+                <div class="foot-logo">
+                    <a href="#home">
+                        <img src="images/DeliCupCake.png" alt="">
+                        <p>DeliCup</p>
+                    </a>
+                </div>
+                <p class="foot-subtitle">O sabor que marca gerações.</p>
+            </div>
+            <div class="foot-links">
+                <div class="foot-links-part">
+                    <h5>Cardápio</h5>
+                    <ul>
+                        <li><a href="#produtos">Brigadeiro</a></li>
+                        <li><a href="#produtos">Ninho com Nutella</a></li>
+                        <li><a href="#produtos">Doce de leite</a></li>
+                    </ul>
+                </div>
+                <div class="foot-links-part">
+                    <h5>A marca</h5>
+                    <ul>
+                        <li><a href="#nossa-historia">Nossa história</a></li>
+                        <li><a href="https://www.instagram.com/deli_cup.oficial/" target="_blank">Instagram</a></li>
+                        <li><a href="#contato">Fale conosco</a></li>
+                    </ul>
+                </div>
+                <div class="foot-links-part">
+                    <h5>Peça já</h5>
+                    <ul>
+                        <li><a href="#">iFood</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="#">Retirada no local</a></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+         <div class="copy">
+            <p>&copy; 2026 DeliCup. Todos os direitos reservados.</p>
+         </div>
     </footer>
 
     <script src="js/script.js"></script>
