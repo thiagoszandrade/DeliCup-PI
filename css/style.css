@@ -6,12 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: var(--fonte-txt);
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+   font-family: var(--fonte-txt);
+   text-align: justify;
 }
 
 :root {
@@ -117,6 +118,11 @@ header {
 
 .menu-logo {
    display: flex;
+}
+
+.menu-logo a {
+   display: flex;
+   flex-direction: row;
    align-items: center;
 }
 
@@ -145,11 +151,19 @@ header {
    display: none;
 }
 
+.menu-pedido-mobile {
+   display: none;
+}
+
 @media (max-width: 768px) {
    .cabecalho-menu {
       justify-content: space-between;
       padding: 0px 30px;
       position: relative;
+   }
+
+   #cabecalho img {
+      max-width: 70px;
    }
 
    #menuNavegacao {
@@ -173,6 +187,22 @@ header {
       border-bottom: 1px solid var(--color-pink);
       padding: 20px;
       font-size: 1.2rem;
+   }
+
+   #menuNavegacao .menu-pedido-mobile {
+      display: block;
+      text-align: center;
+   }
+
+   #menuNavegacao .menu-pedido-mobile a {
+      background-color: var(--color-pink);
+      text-align: center;
+      font-size: 1.2rem;
+      color: white;
+   }
+
+   #menuNavegacao .menu-pedido-mobile a:hover {
+      font-size: 1.5rem;
    }
 
    #menuNavegacao.aberto {
@@ -212,7 +242,6 @@ header {
 
 .home-img {
    order: 2;
-
 }
 
 #home-txtbtn {
@@ -222,6 +251,10 @@ header {
 
 .home-txtbtn {
    padding: 20px 0;
+}
+
+#home-title {
+   text-align: justify;
 }
 
 #home-title span {
@@ -298,6 +331,10 @@ header {
   max-width: 600px;
 }
 
+.sobre-txt .title {
+   text-align: left;
+}
+
 #sobre h2 {
   font-size: 2.5rem;
   padding-bottom: 20px;
@@ -316,6 +353,10 @@ header {
   .sobre-txt {
     order: 1;
     text-align: center;
+  }
+
+  .sobre-txt .title {
+   text-align: center;
   }
 
   .sobre-img-container {
@@ -435,6 +476,7 @@ header {
 #diferenciais h3 {
    padding: 10px 0;
    font-size: 1.5rem;
+   text-align: left;
 }
 
 #diferenciais.section {
@@ -516,84 +558,90 @@ header {
 }
 
 .nh-title {
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    max-width: 900px;
-    padding: 40px;
+   justify-content: center;
+   text-align: center;
+   width: 100%;
+   max-width: 900px;
+   padding: 40px;
+}
+
+.nh-title .title {
+   text-align: center;
 }
 
 .nh-title h2 {
-    font-size: 2.5rem;
-    padding-bottom: 20px;
+   font-size: 2.5rem;
+   padding-bottom: 20px;
 }
 
 .nh-content1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px;
-    text-align: center;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 30px;
+   text-align: center;
 }
 
 .nh-content1 h3 {
-    font-size: 2rem;
-    font-family: var(--fonte-title);
-    color: var(--color-pink);
+   text-align: center;
+   font-size: 2rem;
+   font-family: var(--fonte-title);
+   color: var(--color-pink);
 }
 
 .nh-content2 {
-    display: flex;
-    flex-direction: row;
+   display: flex;
+   flex-direction: row;
 }
 
 .nh-cards {
-    background-color: var(--color-lightbege);
-    color: var(--color-pink);
-    border: 2px solid var(--color-brown);
-    border-radius: 20px;
-    box-shadow: 8px 8px 0 var(--shadow);
-    margin: 30px;
-    padding: 20px;
-    max-width: 400px;
-    transition: .3s;
+   background-color: var(--color-lightbege);
+   color: var(--color-pink);
+   border: 2px solid var(--color-brown);
+   border-radius: 20px;
+   box-shadow: 8px 8px 0 var(--shadow);
+   margin: 30px;
+   padding: 20px;
+   max-width: 400px;
+   transition: .3s;
 }
 
 .nh-cards:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 15px 15px 0 var(--shadow);
+   transform: translate(-4px, -4px);
+   box-shadow: 15px 15px 0 var(--shadow);
 }
 
 .nh-cards h3 {
-    padding: 10px 0;
-    font-size: 1.2rem;
+   padding: 10px 0;
+   font-size: 1.2rem;
 }
 
 .nh-foot {
-    text-align: center;
-    max-width: 600px;
+   text-align: center;
+   max-width: 600px;
 }
 
 .nh-foot span {
-    font-size: 1.2rem;
-    font-weight: 500;
+   font-size: 1.2rem;
+   font-weight: 500;
 }
 
 .nh-foot p {
-    padding-bottom: 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
+   padding-bottom: 20px;
+   font-size: 1.2rem;
+   font-weight: 500;
+   text-align: center;
 }
 
 @media (max-width: 768px) {
-    .nh-content1 {
-        flex-direction: column;
-        gap: 50px;
-    }
+   .nh-content1 {
+      flex-direction: column;
+      gap: 50px;
+   }
 
-    .nh-content2 {
-        flex-direction: column;
-    }
+   .nh-content2 {
+      flex-direction: column;
+   }
 }
 /* ============================================================
    SEÇÃO 7 — MISSÃO, VISÃO E VALORES
@@ -689,6 +737,9 @@ header {
 }
 
 .equipe-title {
+   text-align: center;
+}
+.equipe-title .title {
    text-align: center;
 }
 
@@ -799,6 +850,10 @@ header {
    padding-top: 70px;
 }
 
+.contato-content .title {
+   text-align: left;
+}
+
 .contato-fc {
    color: white;
    max-width: 600px;
@@ -815,20 +870,57 @@ header {
    padding-bottom: 30px;
 }
 
+.contato-fc ul {
+   background-color: var(--color-lightbege);
+   border: 2px solid var(--color-brown);
+   border-radius: 30px;
+   max-width: 400px;
+   padding: 30px;
+   align-items: center;
+}
+
+.contato-fc ul img {
+   width: 40px;
+   height: auto;
+}
+
 .contato-fc li {
-   padding-bottom: 20px;
+   padding-bottom: 5px;
    list-style: disc;
 }
 
+.contato-fc li a {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   color: var(--color-brown);
+   font-weight: 500;
+   font-size: 1.2rem;
+   transition: .3s;
+}
+
+.contato-fc li a:hover {
+   transform: scale(1.05);
+}
+
 .contato-pedido {
-   background-color: var(--color-lightbege);
    display: flex;
    flex-direction: column;
+   background-color: var(--color-lightbege);
    border: 2px solid var(--color-brown);
    border-radius: 30px;
    padding: 30px;
    max-width: 500px;
-   align-self: center;
+   justify-content: space-around;
+}
+
+.contato-pedido-btn {
+   display: flex;
+   flex-direction: column;
+}
+
+.contato-pedido a {
+   align-items: center;
 }
 
 #contato a {
@@ -837,6 +929,8 @@ header {
 
 .contato-pedido .btn1, .btn2 {
    text-align: center;
+   align-content: center;
+   font-size: 1.2rem;
 }
 
 .contato-pedido .btn2 {
@@ -868,6 +962,21 @@ header {
 @media (max-width: 768px) {
    .contato-content {
       flex-direction: column;
+      align-items: center;
+      display: flex;
+   }
+
+   .contato-fc .title {
+      text-align: center;
+   }
+
+   .contato-fc ul {
+      margin: auto;
+      max-width: 100%;
+   }
+
+   .contato-pedido {
+      max-width: 100%;
    }
 
    .contato-map {
@@ -899,12 +1008,17 @@ header {
    width: 100%;
    display: flex;
    justify-content: center;
-   gap: 50px;
+   gap: 80px;
    padding: 0 50px;
 }
 
 .foot-logo {
    display: flex;
+}
+
+.foot-logo a {
+   display: flex;
+   flex-direction: row;
    align-items: center;
 }
 
@@ -928,7 +1042,7 @@ header {
 .foot-links {
    display: flex;
    flex-direction: row;
-   gap: 40px;
+   gap: 80px;
 }
 
 .foot-links-part {
@@ -958,20 +1072,26 @@ header {
 .copy {
    padding: 0 100px;
    width: 100%;
-   text-align: center;
 }
 
 .copy p {
    border-top: 2px solid var(--color-brown);
    padding-top: 20px;
+   text-align: center;
 }
 
 @media (max-width: 768px) {
+   #rodape img {
+      max-width: 80px;
+   }
+
    .foot-top {
       flex-direction: column;
+      gap: 40px;
    }
 
    .foot-links {
       flex-direction: column;
+      gap: 40px;
    }
 }
