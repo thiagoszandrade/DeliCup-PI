@@ -108,26 +108,68 @@ p {
    Responsável: (Vitor Ferrer)
 ============================================================= */
 #sobre.section {
-  background-color: var(--color-lightbeige);
-  border-bottom: 2px solid var(--color-brown);
+   background-color: var(--color-lightbege);
+   border-bottom: 2px solid var(--color-brown);
 }
 
 .carrossel-container {
   display: flex;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
+  border: 2px solid var(--color-brown);
+  border-radius: 30px;
 }
 
-.carrossel-img {
-  background-image: url(../images/CupCake-image1.jpg);
+.carrossel-manual {
+  position: relative;
+  overflow: hidden;
+}
+
+.carrossel-manual .carrossel-track {
+  display: flex;
+  width: 300%;
+  height: 500px;
+  transition: .5s ease-in-out;
+}
+
+.carrossel-manual .carrossel-slide {
+  width: 100%;
+  flex-shrink: 0;
   background-position: center;
   background-size: cover;
-  margin: auto;
-  width: 100%;
-  max-width: 400px;
-  height: 500px;
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-bege);
   border: 2px solid var(--color-brown);
-  border-radius: 20px;
+  color: var(--color-brown);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: .2s ease-in-out;
+}
+
+.carrossel-btn:hover {
+  background-color: var(--color-brown);
+  color: var(--color-bege);
+  border: 2px solid var(--color-bege);
+}
+
+.carrossel-prev {
+  left: 15px;
+}
+
+.carrossel-next {
+  right: 15px;
 }
 
 .sobre-txt {
