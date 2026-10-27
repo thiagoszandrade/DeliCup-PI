@@ -28,19 +28,41 @@ const carrosselNext = document.getElementById('carrosselNext')
 let carrosselManualIndex = 0
 const totalSlidesManual = 3
 
+const TEMPO_AUTO = 3000
+const TEMPO_RETOMADA = 6000
+
+let intervaloAuto = null
+let timeoutRetomada = null
+
 function irParaSlideManual(index) {
   carrosselManualIndex = index
-  carrosselManualTrack.style.transform = `translateX(-${index * 100}%)`
+  carrosselManualTrack.style.transform = `translateX(-${index * 33.33334}%)`
+}
+
+function iniciarAuto() {
+  clearInterval(intervaloAuto)
+  intervaloAuto = setInterval(() => {
+    irParaSlideManual((carrosselManualIndex + 1) % totalSlidesManual)
+  }, TEMPO_AUTO)
+}
+
+function pausarEVoltarDepois() {
+  clearInterval(intervaloAuto)
+  clearTimeout(timeoutRetomada)
+  timeoutRetomada = setTimeout(iniciarAuto, TEMPO_RETOMADA)
 }
 
 carrosselNext.addEventListener('click', () => {
   irParaSlideManual((carrosselManualIndex + 1) % totalSlidesManual)
+  pausarEVoltarDepois()
 })
 
 carrosselPrev.addEventListener('click', () => {
   irParaSlideManual((carrosselManualIndex - 1 + totalSlidesManual) % totalSlidesManual)
+  pausarEVoltarDepois()
 })
 
+iniciarAuto()
 // ============================================================
 // SEÇÃO 4 — PRODUTOS
 // Responsável: (Vitória)

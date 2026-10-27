@@ -326,10 +326,11 @@ header {
   width: 300%;
   height: 500px;
   transition: .5s ease-in-out;
+  flex-shrink: 0;
 }
 
 .carrossel-manual .carrossel-slide {
-  width: 100%;
+  width: calc(100% / 3);
   flex-shrink: 0;
   background-position: center;
   background-size: cover;
