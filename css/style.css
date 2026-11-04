@@ -427,6 +427,7 @@ header {
 .produtos-titulo h2 {
    font-size: 2.5rem;
    padding-bottom: 20px;
+   text-align: center;
 }
 
 .produtos-titulo p {
@@ -514,6 +515,9 @@ header {
 
 #diferenciais h2 {
    font-size: 2.5rem;
+   text-align: center;
+   color: var(--color-bege);
+   padding-bottom: 20px;
 }
 
 #diferenciais h3 {
