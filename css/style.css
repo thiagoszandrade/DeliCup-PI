@@ -452,8 +452,8 @@ header {
    margin: 20px;
    padding: 20px;
    width: 100%;
-   max-width: 400px;
-   height: 400px;
+   max-width: 350px;
+   height: 480px;
    transition: .3s;
 }
 
@@ -463,13 +463,24 @@ header {
 }
 
 .produtos-img {
-   background-image: url('../images/CupCake-image1.jpg');
    background-size: cover;
    background-position: center;
    border: 2px solid var(--color-brown);
    border-radius: 15px;
    width: 100%;
-   height: 150px;
+   min-height: 200px;
+}
+
+.produtos-img1 {
+   background-image: url('../images/brigadeiro-square.png');
+}
+
+.produtos-img2 {
+   background-image: url('../images/ninho-square.png');
+}
+
+.produtos-img3 {
+   background-image: url('../images/doce_de_leite-square.png');
 }
 
 .produtos-cards .title {
