@@ -275,6 +275,7 @@ header {
 
 #home .btn1, .btn2 {
    font-size: 18px;
+   text-align: center;
 }
 
 @media (max-width: 920px) {
@@ -295,6 +296,12 @@ header {
 
    #home-txtbtn {
       order: 2;
+   }
+}
+
+@media (max-width: 600px) {
+   #home .btn1, .btn2 {
+      width: 100%;
    }
 }
 
@@ -645,6 +652,10 @@ header {
    font-size: 2rem;
    font-family: var(--fonte-title);
    color: var(--color-pink);
+}
+
+.nh-content1-describe {
+   text-align: center;
 }
 
 .nh-content2 {
