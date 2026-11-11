@@ -94,12 +94,27 @@ iniciarAuto()
 
 
 // ============================================================
-// SEÇÃO 9 — CONTATO / LOCALIZAÇÃO
+// SEÇÃO 9 — AVALIAÇÃO
+// Responsável: (Thiago)
+// ============================================================
+const formulario = document.getElementById('form')
+const containerForm = document.querySelector('.avaliacao-form')
+const mensagem = document.getElementById('avaliacao-mensagem')
+
+formulario.addEventListener('submit', function(evento) {
+  evento.preventDefault()
+  formulario.style.display = 'none'
+  containerForm.style.display = 'none'
+  mensagem.style.display = 'block'
+})
+
+// ============================================================
+// SEÇÃO 10 — CONTATO / LOCALIZAÇÃO
 // Responsável: (Thiago)
 // ============================================================
 
 
 // ============================================================
-// SEÇÃO 10 — RODAPÉ (FOOTER)
+// SEÇÃO 11 — RODAPÉ (FOOTER)
 // Responsável: (Thiago))
 // ============================================================

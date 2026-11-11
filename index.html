@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeliCup</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/DeliCupCupcake.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/DeliCupLogo.png" type="image/x-icon">
 </head>
 <body>
 
@@ -290,9 +290,44 @@
         </div>
     </section>
 
+    <!-- ============================================================
+         SEÇÃO 9 — AVALIAÇÃO
+         Responsável: (Thiago)
+    ============================================================= -->
+    <section id="avaliacao" class="section">
+        <div class="avaliacao-title">
+            <h2 class="title">Avaliações</h2>
+            <p>Já experimentou um de nossos produtos? Queremos o seu feedback!</p>
+        </div>
+        <div class="avaliacao-form">
+            <form action="" method="post" id="form">
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" required>
+
+                <label for="nota">Nota: </label>
+                <select name="nota" id="nota" required>
+                    <option value="" disabled selected>Escolha uma nota: </option>
+                    <option value="1">Excelente</option>
+                    <option value="2">Muito bom</option>
+                    <option value="3">Bom</option>
+                    <option value="4">Regular</option>
+                    <option value="5">Ruim</option>
+                </select>
+                
+                <label for="comentario">Comentário: </label>
+                <textarea name="comentario" id="comentario" required></textarea>
+
+                <button type="submit" class="btn1">Enviar avaliação</button>
+            </form>
+        </div>
+        <div id="avaliacao-mensagem">
+            <p>Obrigado pela sua avaliação! Ela é muito importante para nós.</p>
+        </div>
+    </section>
+
 
     <!-- ============================================================
-         SEÇÃO 9 — CONTATO / LOCALIZAÇÃO
+         SEÇÃO 10 — CONTATO / LOCALIZAÇÃO
          Responsável: (Thiago)
     ============================================================= -->
     <section id="contato" class="section">
@@ -321,7 +356,7 @@
                     <p>Escolha o canal mais rápido para garantir seu docinho de infância ainda hoje.</p>
                 </div>
                 <div class="contato-pedido-btn">
-                    <a href="#contato" class="btn1">Pedir pelo iFood</a>
+                    <a href="https://www.instagram.com/deli_cup.oficial/" class="btn1" target="_blank">Nosso Instagram</a>
                     <a href="https://wa.me/5518996603181" class="btn2">Chamar no WhatsApp</a>
                 </div>
             </div>
@@ -333,7 +368,7 @@
 
 
     <!-- ============================================================
-         SEÇÃO 10 — RODAPÉ (FOOTER)
+         SEÇÃO 11 — RODAPÉ (FOOTER)
          Responsável: (Thiago)
     ============================================================= -->
     <footer id="rodape" class="section">

@@ -63,7 +63,7 @@ html {
    box-shadow: 8px 8px 0 var(--shadow);
 }
 
-p {
+p, label {
    font-size: 1.15rem;
    color: var(--color-brown);
    font-weight: 400;
@@ -900,9 +900,102 @@ header {
    }
 }
 
+/* ============================================================
+   SEÇÃO 9 — AVALIAÇÃO
+   Responsável: (Thiago)
+============================================================= */
+#avaliacao.section {
+   background-color: var(--color-brown);
+   flex-direction: column;
+}
+
+.avaliacao-title p {
+   color: var(--color-bege);
+   text-align: center;
+}
+
+.avaliacao-title h2 {
+   font-size: 2.5rem;
+   padding-bottom: 20px;
+   color: var(--color-bege);
+   text-align: center;
+}
+
+.avaliacao-form {
+   background-color: var(--color-bege);
+   padding: 40px;
+   border-radius: 40px;
+   width: 100%;
+   max-width: 800px;
+   box-shadow: 10px 10px 0 #2e1c11;
+   transition: .3s;
+}
+
+.avaliacao-form:hover {
+   transform: scale(1.015);
+   box-shadow: 15px 15px 0 #2e1c11;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+}
+
+label {
+   font-size: 1.2rem;
+   font-weight: 500;
+   padding: 15px 0 5px;
+}
+
+input, select, textarea {
+   border: 2px solid var(--color-brown);
+   height: 40px;
+   border-radius: 8px;
+   padding: 8px;
+   font-size: 1.15rem;
+   box-shadow: 5px 5px 0 var(--shadow);
+}
+
+input::placeholder {
+   padding: 20px;
+}
+
+textarea {
+   resize: vertical;
+   height: 300px;
+}
+
+form .btn1 {
+   width: 100%;
+   max-width: 400px;
+   align-self: center;
+   margin-top: 30px;
+   text-align: center;
+   padding: 10px;
+   height: 60px;
+   font-size: 1.2rem;
+   flex-wrap: wrap;
+   cursor: pointer;
+}
+
+#avaliacao-mensagem {
+   display: none;
+   background-color: var(--color-bege);
+   padding: 60px 40px;
+   border-radius: 30px;
+}
+
+#avaliacao-mensagem p {
+   font-size: 1.4rem;
+   font-weight: 600;
+   line-height: 1.8rem;
+   text-align: center;
+}
+
 
 /* ============================================================
-   SEÇÃO 9 — CONTATO / LOCALIZAÇÃO
+   SEÇÃO 10 — CONTATO / LOCALIZAÇÃO
    Responsável: (Thiago)
 ============================================================= */
 #contato {
@@ -1057,9 +1150,8 @@ header {
    }
 }
 
-
 /* ============================================================
-   SEÇÃO 10 — RODAPÉ / FOOTER
+   SEÇÃO 11 — RODAPÉ / FOOTER
    Responsável: (Thiago)
 ============================================================= */
 #rodape {
