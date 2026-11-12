@@ -300,12 +300,12 @@
             <p>Já experimentou um de nossos produtos? Queremos o seu feedback!</p>
         </div>
         <div class="avaliacao-form">
-            <form action="" method="post" id="form">
-                <label for="nome">Nome: </label>
-                <input type="text" name="nome" id="nome" required>
+            <form action="" method="post" id="form-av">
+                <label for="nome-av">Nome: </label>
+                <input type="text" name="nome-av" id="nome-av" required>
 
-                <label for="nota">Nota: </label>
-                <select name="nota" id="nota" required>
+                <label for="nota-av">Nota: </label>
+                <select name="nota-av" id="nota-av" required>
                     <option value="" disabled selected>Escolha uma nota: </option>
                     <option value="1">Excelente</option>
                     <option value="2">Muito bom</option>
@@ -314,8 +314,8 @@
                     <option value="5">Ruim</option>
                 </select>
                 
-                <label for="comentario">Comentário: </label>
-                <textarea name="comentario" id="comentario" required></textarea>
+                <label for="comentario-av">Comentário: </label>
+                <textarea name="comentario-av" id="comentario-av" required></textarea>
 
                 <button type="submit" class="btn1">Enviar avaliação</button>
             </form>
@@ -336,28 +336,31 @@
             <div class="contato-fc">
                 <h2 class="title">Fale com a gente</h2>
                 <p>Tem uma encomenda, uma dúvida sobre sabores ou quer levar a DeliCup para sua festa? É só chamar!</p>
-                <div class="contato-list">
-                    <ul>
-                        <li>
-                            <a href="https://wa.me/5518996603181" target="_blank"> <img src="images/wpp.png" alt="WhatsApp">(18) 99660-3181</a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/deli_cup.oficial/" target="_blank"><img src="images/instagram.png" alt="">@deli_cup.oficial</a>
-                        </li>
-                        <li>
-                            <a href="https://maps.app.goo.gl/E7LiiBeK2QfviVY9A" target="_blank"><img src="images/map.png" alt="">Assis, SP</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-            <div class="contato-pedido">
-                <div class="contato-pedido-txt">
-                    <h3 class="title">Peça o seu cupcake</h3>
-                    <p>Escolha o canal mais rápido para garantir seu docinho de infância ainda hoje.</p>
+            <div class="contato-container-pedido">
+                <div class="contato-pedido">
+                    <div class="contato-pedido-txt">
+                        <h3 class="title">Peça o seu cupcake</h3>
+                        <p>Escolha o canal mais rápido para garantir seu docinho de infância ainda hoje.</p>
+                    </div>
+                    <div class="contato-pedido-btn">
+                        <a href="https://www.instagram.com/deli_cup.oficial/" class="btn1" target="_blank">Nosso Instagram</a>
+                        <a href="https://wa.me/5518996603181" class="btn2">Chamar no WhatsApp</a>
+                    </div>
                 </div>
-                <div class="contato-pedido-btn">
-                    <a href="https://www.instagram.com/deli_cup.oficial/" class="btn1" target="_blank">Nosso Instagram</a>
-                    <a href="https://wa.me/5518996603181" class="btn2">Chamar no WhatsApp</a>
+                <div class="contato-form">
+                    <form action="" method="post" id="form-cont">
+                        <label for="nome-cont">Nome: </label>
+                        <input type="text" name="nome-cont" id="nome-cont" placeholder="Digite seu nome..." required>
+
+                        <label for="email-cont">Email: </label>
+                        <input type="email" name="email-cont" id="email-cont" placeholder="Digite seu e-mail" required>
+
+                        <label for="mensagem-cont">Mensagem: </label>
+                        <textarea name="mensagem-cont" id="mensagem-cont" placeholder="Escreva a sua mensagem..." required></textarea>
+
+                        <button type="submit" class="btn1">Envie sua mensagem</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -403,9 +406,8 @@
                 <div class="foot-links-part">
                     <h5>Peça já</h5>
                     <ul>
-                        <li><a href="#contato">iFood</a></li>
                         <li><a href="https://wa.me/5518996603181" target="_blank">WhatsApp</a></li>
-                        <li><a href="#contato">Retirada no local</a></li>
+                        <li><a href="https://maps.app.goo.gl/oTXYE7hwVoTou5XA7" target="_blank">Nosso local</a></li>
                     </ul>
                 </div>
             </div>

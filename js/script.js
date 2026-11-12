@@ -97,7 +97,7 @@ iniciarAuto()
 // SEÇÃO 9 — AVALIAÇÃO
 // Responsável: (Thiago)
 // ============================================================
-const formulario = document.getElementById('form')
+const formulario = document.getElementById('form-av')
 const containerForm = document.querySelector('.avaliacao-form')
 const mensagem = document.getElementById('avaliacao-mensagem')
 
@@ -112,7 +112,13 @@ formulario.addEventListener('submit', function(evento) {
 // SEÇÃO 10 — CONTATO / LOCALIZAÇÃO
 // Responsável: (Thiago)
 // ============================================================
+const formularioContato = document.getElementById('form-cont')
 
+formularioContato.addEventListener('submit', function(evento) {
+  evento.preventDefault()
+  window.alert('Mensagem enviada com sucesso!!')
+  formularioContato.reset()
+})
 
 // ============================================================
 // SEÇÃO 11 — RODAPÉ (FOOTER)

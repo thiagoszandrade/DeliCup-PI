@@ -957,13 +957,17 @@ input, select, textarea {
    box-shadow: 5px 5px 0 var(--shadow);
 }
 
+input::selection {
+   border: none;
+}
+
 input::placeholder {
    padding: 20px;
 }
 
 textarea {
    resize: vertical;
-   height: 300px;
+   height: 200px;
 }
 
 form .btn1 {
@@ -1007,18 +1011,14 @@ form .btn1 {
 
 .contato-content {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    gap: 50px;
    padding-top: 70px;
+   width: 100%;
 }
 
 .contato-content .title {
-   text-align: left;
-}
-
-.contato-fc {
-   color: white;
-   max-width: 600px;
+   text-align: center;
 }
 
 .contato-fc h2 {
@@ -1030,49 +1030,28 @@ form .btn1 {
 .contato-fc p {
    color: white;
    padding-bottom: 30px;
+   text-align: center;
+   justify-content: center;
+   max-width: 600px;
+   margin: auto;
 }
 
-.contato-fc ul {
-   background-color: var(--color-lightbege);
-   border: 2px solid var(--color-brown);
-   border-radius: 30px;
-   max-width: 400px;
-   padding: 30px;
-   align-items: center;
-}
-
-.contato-fc ul img {
-   width: 40px;
-   height: auto;
-}
-
-.contato-fc li {
-   padding-bottom: 5px;
-   list-style: disc;
-}
-
-.contato-fc li a {
-   display: inline-flex;
-   align-items: center;
-   gap: 10px;
-   color: var(--color-brown);
-   font-weight: 500;
-   font-size: 1.2rem;
-   transition: .3s;
-}
-
-.contato-fc li a:hover {
-   transform: scale(1.05);
+.contato-container-pedido {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 20px;
 }
 
 .contato-pedido {
+   order: 2;
    display: flex;
    flex-direction: column;
    background-color: var(--color-lightbege);
    border: 2px solid var(--color-brown);
    border-radius: 30px;
    padding: 30px;
-   max-width: 500px;
+   max-width: 350px;
    justify-content: space-around;
 }
 
@@ -1110,6 +1089,19 @@ form .btn1 {
    padding-bottom: 20px;
 }
 
+.contato-form {
+   background-color: var(--color-lightbege);
+   padding: 30px;
+   border: 2px solid var(--color-brown);
+   border-radius: 30px;
+   width: 100%;
+   max-width: 600px;
+}
+
+#form-cont .btn1 {
+   max-width: 100%;
+}
+
 .contato-map {
    width: 100%;
    max-width: 1150px;
@@ -1132,13 +1124,12 @@ form .btn1 {
       text-align: center;
    }
 
-   .contato-fc ul {
-      margin: auto;
+   .contato-pedido {
       max-width: 100%;
    }
 
-   .contato-pedido {
-      max-width: 100%;
+   .contato-container-pedido {
+      flex-direction: column;
    }
 
    .contato-map {
