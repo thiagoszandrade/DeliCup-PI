@@ -163,7 +163,7 @@ header {
 }
 
 #wpp-btn img {
-   width: 90px;
+   width: 69px;
 }
 
 @media (max-width: 768px) {
@@ -235,10 +235,6 @@ header {
 
    #menuNavegacao.aberto {
       display: flex;
-   }
-
-   #wpp-btn img {
-      width: 70px;
    }
 }
 
